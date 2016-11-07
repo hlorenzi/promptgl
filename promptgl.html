@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>PromptGL</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body onLoad="load();" style="text-align:center; font-family:verdana,sans-serif; font-size:14px">
+		<div id="divScreen" style="border:2px solid gray; white-space:pre; font-family:lucida console"></div>
+		<br>
+		
+		<input id="checkboxAnimate" onChange="refreshAnimate();" type="checkbox" checked>Animate</input>
+		<br>
+		
+		Scene:
+		<select id="selectScene" onChange="refreshScene();">
+			<option>Cube</option>
+		</select>
+		
+		Rendering Mode:
+		<select id="selectRenderMode" onChange="refreshRenderMode();">
+			<option>Wireframe</option>
+		</select>
+		
+		Projection:
+		<select id="selectProjection" onChange="refreshProjection();">
+			<option>Perspective</option>
+			<option>Orthographic</option>
+		</select>
+		
+	</body>
+	
+	<script src="vector3.js"></script>
+	<script src="matrix4x4.js"></script>
+	<script src="scene_cube.js"></script>
+	<script src="rendermode_wireframe.js"></script>
+	<script src="main.js"></script>
+
+</html>
